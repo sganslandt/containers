@@ -1,0 +1,79 @@
+body {
+	color: #000000;
+	font-family: "Gill Sans", Arial, sans-serif;
+	font-size: 13px;
+	width: 800px;
+	margin: 3em 1em 3em 1em;
+}
+
+h1 {
+	font-size: 3.67em;
+	font-weight: 300;
+	margin: 0;
+	padding: 0 0 1em 0;
+}
+
+p {
+	font-family: "Times New Roman"
+}
+
+.experience {
+	width: 600px;
+	float: left;
+}
+
+.experience h2 {
+	font-size: 1.78em;
+	font-weight: 300;
+	margin: 0;
+	padding: 0.4em 0 0.4em 0;
+}
+
+.experience .major {
+	font-weight: bold;
+}
+
+.experience .minor {
+	font-weight: 100;
+}
+
+.experience h3 {
+	font-size: 1.22em;
+	margin: 0;
+	padding: 0;
+}
+
+.experience p {
+	font-size: 1em;
+	font-weight: 100;
+	padding: 0 0 0 2em;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	width: 200px;
+	float: right;
+	text-align: right;
+}
+
+.right h2 {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+.right p {
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: none;
+	font-weight: lighter;
+	margin: 0 0 1em 0;
+	padding: 0;
+}
