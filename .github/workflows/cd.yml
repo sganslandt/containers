@@ -12,13 +12,26 @@ jobs:
   docker:
     runs-on: ubuntu-latest
     steps:
-      -
-        name: Checkout
+      - name: Checkout
         uses: actions/checkout@v4
-      -
-        name: Build and push
+
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: |
+            ghcr.io/sganslandt/cv
+          # generate Docker tags based on the following events/attributes
+          tags: |
+            type=schedule
+            type=ref,event=branch
+            type=ref,event=pr
+            type=sha             
+
+      - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: ghcr.io/sganslandt/cv:$DOCKER_TAG
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
